@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Business Plan: Sustainable Leather Ecommerce Platform | Esteemed Client</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Serif+Pro:wght@400;600&display=swap');
+        
+        :root {
+            --primary-color: #222;
+            --secondary-color: #444;
+            --background-color: #fff;
+            --border-color: #ddd;
+            --highlight-color: #2c3e50;
+            --accent-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif Pro', serif;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            line-height: 1.7;
+            font-weight: 300;
+            font-size: 10.5pt;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            counter-reset: section;
+        }
+        
+        .container {
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18pt;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            color: var(--highlight-color);
+        }
+        
+        .subtitle {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12pt;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+        
+        .author {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11pt;
+            margin-bottom: 5px;
+        }
+        
+        .affiliation {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .date-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .date {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #777;
+        }
+        
+        .partnerships-button, .research-button {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10pt;
+            color: #fff;
+            background-color: #777;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+        
+        .partnerships-button:hover, .research-button:hover {
+            background-color: #555;
+        }
+        
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 13pt;
+            margin: 40px 0 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            counter-increment: section;
+            position: relative;
+            color: var(--highlight-color);
+        }
+        
+        h2::before {
+            content: counter(section) ". ";
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 11.5pt;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .abstract {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 3px solid var(--border-color);
+            margin-bottom: 30px;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        
+        .abstract p:last-child {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+            transition: all 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--highlight-color);
+            border-bottom: 1px solid var(--highlight-color);
+        }
+        
+        ul, ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .figure {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #fafafa;
+        }
+        
+        .figure-content {
+            width: 100%;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .caption {
+            font-size: 9.5pt;
+            color: #666;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .result-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        
+        .result-card h4 {
+            font-size: 11pt;
+            margin-bottom: 10px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .link-item {
+            font-size: 9.5pt;
+            background: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .link-item a {
+            border-bottom: none;
+        }
+        
+        .product-selector {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #f9f9f9;
+        }
+        
+        .product-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .product-selector select {
+            width: 100%;
+            padding: 10px;
+            font-size: 10.5pt;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: white;
+            font-family: 'Source Serif Pro', serif;
+            color: var(--primary-color);
+        }
+        
+        .product-selector select:focus {
+            outline: none;
+            border-color: var(--highlight-color);
+            box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .pricing-table th {
+            background: #f9f9f9;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 9pt;
+            color: #777;
+            text-align: center;
+        }
+        
+        .podcast-container {
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 16pt;
+            }
+            
+            .subtitle {
+                font-size: 11pt;
+            }
+            
+            .figure-content {
+                height: 250px;
+            }
+            
+            .date-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .partnerships-button, .research-button {
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Executive Business Plan: Sustainable Leather Ecommerce Platform</h1>
+            <div class="subtitle">Using computational models and machine learning to predict outcomes, analyze complex datasets, and reduce the need for physical experiments</div>
+            <div class="author"><a href="https://borelsigma.com/">Deepika Nair</a>, President, Borel Sigma Inc, HaaS & DWaaS</div>
+            <div class="affiliation">Sustainable Fashion Technology Ecosystem</div>
+            <div class="date-container">
+                <div class="date">July 7, 2025</div>
+                <div>
+                    <a href="https://esg-scientific-iin.github.io/LFJIV12BS1980IVFIR12BS/" class="partnerships-button">Partnerships Details</a>
+                    <a href="https://zenodo.org/records/15829624" class="research-button">Research Paper</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="abstract">
+            <h3>Executive Summary</h3>
+            <p>Esteemed Client aims to become the leading direct-to-consumer platform for premium animal-free leather fashion, leveraging AI-driven personalization and sustainable manufacturing. The platform targets $1.25M in revenue in Year 1, scaling to $14M by Year 3, with a customer acquisition cost of $35 (below the industry average of $50-70) and a projected ROI of 240% within 24 months. By Year 2, Esteemed Client seeks to be among the top three sustainable fashion e-retailers, driven by a vertically integrated supply chain, AI personalization, and a commitment to sustainability.</p>
+            <div class="podcast-container">
+                <div style="height: 228px; width: 100%;">
+                    <iframe src="https://audio.com/embed/audio/1836995883920710?theme=light" style="display:block; border-radius: 1px; border: none; height: 204px; width: 100%;"></iframe>
+                    <a href='https://audio.com/borel-sigma-inc' style="text-align: center; display: block; color: #A4ABB6; font-size: 12px; font-family: sans-serif; line-height: 16px; margin-top: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@borel-sigma-inc</a>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Implementation Timeline</h2>
+        <ul>
+            <li>Months 1-2: Platform development and launch.</li>
+            <li>Months 3-4: Customer acquisition and feedback.</li>
+            <li>Months 5-6: Product line expansion.</li>
+            <li>Months 7-8: Technology licensing launch.</li>
+            <li>Months 9-10: International expansion.</li>
+            <li>Months 11-12: Series A preparation.</li>
+        </ul>
+        
+        <h2>Funding Requirements</h2>
+        
+        <h3>Immediate Needs (Seed)</h3>
+        <ul>
+            <li>Amount: $250,000.</li>
+            <li>Use: Platform development, initial inventory, marketing.</li>
+            <li>Expected ROI: 300% within 18 months.</li>
+        </ul>
+        
+        <h3>Growth Capital (Series A)</h3>
+        <ul>
+            <li>Amount: $2-3M (Month 12).</li>
+            <li>Use: Scaling operations, technology development, market expansion.</li>
+            <li>Valuation Target: $15-20M.</li>
+        </ul>
+        
+        <h2>Success Factors</h2>
+        <ul>
+            <li>Speed to Market: Launch MVP in 8 weeks.</li>
+            <li>Customer Obsession: NPS >70 from day one.</li>
+            <li>Data-Driven Decisions: Weekly KPI reviews.</li>
+            <li>Sustainable Growth: Positive unit economics by Month 3.</li>
+            <li>Innovation Leadership: 2 patents filed in Year 1.</li>
+        </ul>
+        
+        <h2>Next Steps</h2>
+        <ul>
+            <li>Week 1: Finalize tech stack and begin development.</li>
+            <li>Week 2: Secure initial inventory and suppliers.</li>
+            <li>Week 3: Launch pre-order campaign.</li>
+            <li>Week 4: Begin influencer outreach.</li>
+            <li>Week 8: Official platform launch.</li>
+        </ul>
+        
+        <div class="links">
+            <div class="link-item">
+                <strong>Source Code:</strong> 
+                <a href="https://github.com/orgs/borel-sigma/repositories" target="_blank">GitHub Repository</a>
+            </div>
+            <div class="link-item">
+                <strong>Contact:</strong> 
+                <a href="mailto:corporate@borelsigma.com">corporate@borelsigma.com</a>
+            </div>
+            <div class="link-item">
+                <strong>Partnerships:</strong> 
+                <a href="https://aws.amazon.com/">AWS Cloud Infrastructure</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p><a href="https://borelsigma.com/">Deepika Nair</a>, President, Borel Sigma Inc, HaaS & DWaaS | Sustainable Leather Ecommerce Platform</p>
+            <p>Contributors: Deepika N, Muskan S, Kalinga S, Vipul J</p>
+            <p>© 2025 Sustainable Fashion Technology Ecosystem | All Rights Reserved</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Placeholder for potential future interactivity
+        });
+    </script>
+</body>
+</html>
